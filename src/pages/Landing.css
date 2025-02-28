@@ -1,0 +1,15 @@
+/* Landing.css */
+/* Aquí puedes agregar estilos específicos para la página Landing. 
+   Por ejemplo, estilos para agrupar secciones o espaciados adicionales. */
+
+   .landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .landing-section {
+    margin: 40px 0;
+  }
+  

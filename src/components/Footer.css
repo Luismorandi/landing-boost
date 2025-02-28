@@ -1,0 +1,21 @@
+/* Footer.css */
+.footer {
+    background-color:white;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  #boost-rights{
+    font-weight: bold;
+    font-size: 1rem;
+    color: #8574cd
+  }
+
+  #dot-rights{
+    font-weight: bold;
+
+    font-size: 1rem;
+    color: #a2c027
+  }

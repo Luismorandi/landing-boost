@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+.cta-section {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background: #fff;
+  font-family: "Montserrat", sans-serif;
+  color: #fff; /* Cambia si quieres texto blanco sobre un fondo distinto */
+  flex-wrap: wrap;
+     height: 100vh; 
+
+}
+
+/* Modal Overlay */
+.cta__modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Caja del modal */
+.cta__modal {
+  background-color: #fff;
+  color: #333;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Error */
+.cta__error {
+  color: red;
+  margin-top: 1rem;
+}
+
+/* COLUMNA IZQUIERDA: TEXTO */
+.cta-section__content {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cta-section__content span {
+  font-weight: 700;
+}
+
+.cta-section__content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.cta-section__content p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Acciones (botones y form) */
+.cta-section__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cta__button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none; /* Para el <a> */
+}
+
+.cta__button:hover {
+  background-color: #0056b3;
+}
+
+.cta__form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Input */
+.cta__input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* COLUMNA DERECHA: IMAGEN */
+.cta-section__image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-section__image img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cta-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .cta-section__image {
+    margin-top: 1rem;
+    order: -1;
+  }
+}

@@ -1,0 +1,112 @@
+/* Hero.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Hero.css */
+
+
+.hero {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100vw; 
+    margin-left: calc(50% - 50vw); 
+    overflow: hidden; /* Para ocultar lo que se salga horizontalmente */
+    background-color: #fff;
+    text-align: center;
+    padding: 60px 16px;
+    align-items: center;
+
+  }
+  
+  /* Ajusta el tamaño de las imágenes según tu diseño */
+  .hero__image-left,
+  .hero__image-right {
+    position: absolute;
+    top: 50%;
+    width: 450px; /* Aumentado para que se vean más grandes */
+    height: auto;
+    transform: translateY(-50%);
+  }
+  
+  /* Imagen izquierda: 
+     - Mueve 10% fuera de la pantalla (a la izquierda) */
+  .hero__image-left {
+    padding-top: 50px;
+    margin-top: 50px;
+    left: 0;
+    transform: translate(-10%, -50%);
+  }
+  
+  /* Imagen derecha: 
+     - Mueve 10% fuera de la pantalla (a la derecha) */
+  .hero__image-right {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    right: 0;
+    transform: translate(10%, -50%);
+  }
+  
+  /* Contenido sobre las imágenes */
+  .hero__content {
+    position: relative;
+    z-index: 1; /* Para que quede por encima de las imágenes */
+    max-width: 800px; 
+    margin: 0 auto;
+  }
+  
+  /* Título en Montserrat 700, 70px */
+  .hero__content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    color: #1f1f1f;
+  }
+  
+  /* Párrafo en Montserrat 400, 21px, line-height 36px */
+  .hero__content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 36px;;
+    margin: 0;
+    padding: 0 16px;
+    color: #666;
+  }
+
+  .hero__content span{
+    color: #8574cd
+  }
+
+  @media (max-width: 1350px) {
+    .hero__image-left,
+    .hero__image-right {
+      display: none;
+    }
+  }
+  
+  
+  /* RESPONSIVE: Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    /* Reducimos tamaño de imágenes */
+    .hero__image-left,
+    .hero__image-right {
+      width: 250px;
+    }
+  
+    /* Menos “salida” fuera de la pantalla para que no se vea demasiado cortada */
+    .hero__image-left {
+      transform: translate(-5%, -50%);
+    }
+    .hero__image-right {
+      transform: translate(5%, -50%);
+    }
+  
+    /* Título más pequeño */
+    .hero__content h1 {
+      font-size: 40px;
+    }
+  }
+  

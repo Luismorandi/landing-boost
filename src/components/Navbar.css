@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* Para ubicar la hamburguesa y overlay */
+  background-color: #fff;
+  padding: 16px;
+}
+
+/* LOGO */
+.navbar__logo img {
+  max-width: 150px;
+  height: auto;
+  display: block;
+}
+
+/* ENLACES (DESKTOP) */
+.navbar__links {
+  flex: 1;
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  justify-content: center; /* Centra los enlaces */
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.navbar__links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar__links a:hover {
+  color: #007BFF;
+}
+
+/* BOTÓN DESKTOP */
+.navbar__contact {
+  margin-left: auto;
+}
+
+.navbar__button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ÍCONO HAMBURGUESA (OCULTO EN DESKTOP, VISIBLE EN MOBILE) */
+.navbar__toggle {
+  display: none; /* Se mostrará en mobile con @media */
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  margin-left: auto;
+}
+
+/* =====================
+   OVERLAY SEMI-TRANSPARENTE
+   ===================== */
+.navbar__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+  z-index: 9998; /* Debajo del menú (9999) */
+}
+
+/* =====================
+   SIDE DRAWER (MENÚ MÓVIL)
+   ===================== */
+.navbar__mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;         /* Ancho del drawer */
+  height: 100vh;        /* Ocupa toda la pantalla en alto */
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%); /* Fuera de la pantalla por defecto */
+  transition: transform 0.3s ease-in-out;
+  z-index: 9999;        /* Encima del overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centra horizontalmente el contenido */
+  padding: 40px 20px;
+}
+
+/* Cuando isOpen = true => .active => se muestra (translateX(0)) */
+.navbar__mobileMenu.active {
+  transform: translateX(0);
+}
+
+/* LINKS GRANDES EN EL MENÚ MÓVIL */
+.mobileMenu__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;           /* Para ocupar todo el ancho del drawer */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 2rem;     /* Texto más grande */
+  font-weight: 700;
+  text-align: center;    /* Centra el texto */
+}
+
+.mobileMenu__links a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* BOTÓN AL FONDO, CENTRADO */
+.mobileMenu__footer {
+  margin-top: auto;      /* Empuja el botón hacia abajo */
+  width: 100%;           /* Para que el botón se centre */
+  display: flex;
+  justify-content: center;
+}
+
+/* =====================
+   MEDIA QUERY (MOBILE)
+   ===================== */
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none; /* Oculta enlaces de desktop */
+  }
+  .navbar__contact {
+    display: none; /* Oculta botón de desktop */
+  }
+  .navbar__toggle {
+    display: block; /* Muestra el ícono hamburguesa */
+  }
+}
