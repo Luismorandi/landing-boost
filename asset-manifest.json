@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/landing-boost/static/css/main.ae0fb33f.css",
+    "main.js": "/landing-boost/static/js/main.f2b8e0bc.js",
+    "index.html": "/landing-boost/index.html",
+    "main.ae0fb33f.css.map": "/landing-boost/static/css/main.ae0fb33f.css.map",
+    "main.f2b8e0bc.js.map": "/landing-boost/static/js/main.f2b8e0bc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ae0fb33f.css",
+    "static/js/main.f2b8e0bc.js"
+  ]
+}
