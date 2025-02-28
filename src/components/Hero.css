@@ -1,112 +1,113 @@
-/* Hero.css */
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* Hero.css */
-
-
+/* Sección Hero en desktop */
 .hero {
-    display: flex;
-    position: relative;
-    height: 100vh;
-    width: 100vw; 
-    margin-left: calc(50% - 50vw); 
-    overflow: hidden; /* Para ocultar lo que se salga horizontalmente */
-    background-color: #fff;
-    text-align: center;
-    padding: 60px 16px;
-    align-items: center;
+  display: flex;
+  position: relative;
+  height: 100vh;          /* Ocupa la pantalla en desktop */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+  padding: 60px 16px;
+  align-items: center;     /* Centra verticalmente en desktop */
+  justify-content: center; /* Centra horizontalmente en desktop (opcional) */
+}
 
-  }
-  
-  /* Ajusta el tamaño de las imágenes según tu diseño */
+/* Imágenes absolutas a los lados */
+.hero__image-left,
+.hero__image-right {
+  position: absolute;
+  top: 50%;
+  width: 450px;
+  height: auto;
+  transform: translateY(-50%);
+}
+
+.hero__image-left {
+  padding-top: 50px;
+  margin-top: 50px;
+  left: 0;
+  transform: translate(-10%, -50%);
+}
+
+.hero__image-right {
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  right: 0;
+  transform: translate(10%, -50%);
+}
+
+/* Contenido centrado encima de las imágenes */
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero__content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  color: #1f1f1f;
+}
+
+.hero__content p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 36px;
+  margin: 0;
+  padding: 0 16px;
+  color: #666;
+}
+
+.hero__content span {
+  color: #8574cd;
+}
+
+/* 
+   Para pantallas medianas (<= 1350px),
+   oculta las imágenes (si lo deseas).
+*/
+@media (max-width: 1350px) {
   .hero__image-left,
   .hero__image-right {
-    position: absolute;
-    top: 50%;
-    width: 450px; /* Aumentado para que se vean más grandes */
-    height: auto;
-    transform: translateY(-50%);
+    display: none;
   }
-  
-  /* Imagen izquierda: 
-     - Mueve 10% fuera de la pantalla (a la izquierda) */
-  .hero__image-left {
-    padding-top: 50px;
-    margin-top: 50px;
-    left: 0;
-    transform: translate(-10%, -50%);
+}
+
+/* 
+   RESPONSIVE para <= 768px:
+   - Ajusta la altura para que se adapte al contenido (auto)
+   - Alinea y centra el texto 
+   - Oculta imágenes (si deseas) o cambia su tamaño
+*/
+@media (max-width: 768px) {
+  .hero {
+    height: auto;          /* Deja que el contenido defina la altura */
+    padding: 60px 16px;
+    flex-direction: column; /* Apila todo en columna */
+    justify-content: center;/* Centra verticalmente el contenido */
   }
-  
-  /* Imagen derecha: 
-     - Mueve 10% fuera de la pantalla (a la derecha) */
+
+  /* Si quieres ocultar las imágenes en mobile, puedes forzar display: none */
+  .hero__image-left,
   .hero__image-right {
-    padding-bottom: 50px;
-    margin-bottom: 50px;
-    right: 0;
-    transform: translate(10%, -50%);
+    display: none;
   }
-  
-  /* Contenido sobre las imágenes */
+
   .hero__content {
-    position: relative;
-    z-index: 1; /* Para que quede por encima de las imágenes */
-    max-width: 800px; 
     margin: 0 auto;
+    padding: 40px 16px; /* Espacio adicional para que no se pegue abajo */
   }
-  
-  /* Título en Montserrat 700, 70px */
+
+  /* Título más pequeño en mobile */
   .hero__content h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 70px;
-    line-height: 1.2;
-    margin: 0 0 1rem;
-    color: #1f1f1f;
+    font-size: 40px;
   }
-  
-  /* Párrafo en Montserrat 400, 21px, line-height 36px */
-  .hero__content p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 36px;;
-    margin: 0;
-    padding: 0 16px;
-    color: #666;
-  }
-
-  .hero__content span{
-    color: #8574cd
-  }
-
-  @media (max-width: 1350px) {
-    .hero__image-left,
-    .hero__image-right {
-      display: none;
-    }
-  }
-  
-  
-  /* RESPONSIVE: Ajustes para pantallas pequeñas */
-  @media (max-width: 768px) {
-    /* Reducimos tamaño de imágenes */
-    .hero__image-left,
-    .hero__image-right {
-      width: 250px;
-    }
-  
-    /* Menos “salida” fuera de la pantalla para que no se vea demasiado cortada */
-    .hero__image-left {
-      transform: translate(-5%, -50%);
-    }
-    .hero__image-right {
-      transform: translate(5%, -50%);
-    }
-  
-    /* Título más pequeño */
-    .hero__content h1 {
-      font-size: 40px;
-    }
-  }
-  
+}
