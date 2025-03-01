@@ -92,6 +92,9 @@
   .hero {
     height: auto;          /* Deja que el contenido defina la altura */
     padding: 60px 16px;
+    height: 100vh;          /* Ocupa la pantalla en desktop */
+
+    
     flex-direction: column; /* Apila todo en columna */
     justify-content: center;/* Centra verticalmente el contenido */
   }

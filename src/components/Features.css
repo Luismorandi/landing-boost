@@ -3,11 +3,10 @@
 /* Contenedor general de la sección */
 .features {
   width: 100%;
-  max-width: 1200px;   /* Ajusta según tu diseño */
+  max-width: 1200px;
   margin: 0 auto;
-  padding-top: 0; 
-  padding-bottom: 100px;  /* Espaciado vertical generoso */
-  /* Espaciado vertical generoso */
+  padding-top: 0;
+  padding-bottom: 100px; /* Espaciado vertical */
 }
 
 /* Encabezado de la sección */
@@ -20,12 +19,12 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 1rem;
-  color: #222; /* Gris oscuro */
+  color: #222;
 }
 
 .features__header p {
   font-size: 1.125rem;
-  color: #666; /* Texto más claro */
+  color: #666;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -44,13 +43,13 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 16px; /* Espacio entre icono, título y texto */
+  gap: 16px;
 }
 
 /* Icono grande y minimalista */
 .feature__icon {
   font-size: 2rem;
-  color: #000; /* Puedes usar #007BFF si quieres un toque de color */
+  color: #000;
 }
 
 /* Título de cada feature */
@@ -67,4 +66,41 @@
   line-height: 1.6;
   color: #666;
   margin: 0;
+}
+
+/* =========================
+   MEDIA QUERY PARA MOBILE
+   ========================= */
+@media (max-width: 768px) {
+  .features {
+    padding-bottom: 60px; 
+    height: 100vh;          /* Ocupa la pantalla en desktop */
+    /* Menos espacio vertical en mobile */
+  }
+
+  .features__header h2 {
+    font-size: 2rem;      /* Reduce un poco el tamaño del título */
+  }
+
+  .features__header p {
+    font-size: 1rem;      /* Texto más pequeño */
+    margin-bottom: 1rem;  /* Algo de espacio bajo el párrafo */
+  }
+
+  .features__list {
+    grid-template-columns: 1fr; /* Una sola columna en mobile */
+    gap: 20px;                  /* Menor separación */
+  }
+
+  .feature__icon {
+    font-size: 1.5rem; /* Ícono más pequeño */
+  }
+
+  .feature h3 {
+    font-size: 30px; /* Reduce el tamaño del subtítulo */
+  }
+
+  .feature p {
+    font-size: 1.4rem;  /* Texto un poco más compacto */
+  }
 }
