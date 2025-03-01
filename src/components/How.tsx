@@ -23,7 +23,7 @@ const How: React.FC = () => {
           developers
           <span>bring your business ideas to life.</span> This stage is where
           <span>the magic happens</span>—exhilarating and essential to
-          <span>test your concept in the real world.</span> We move quickly and
+          <span> test your concept in the real world.</span> We move quickly and
           cost-effectively to <span>ensure you're on the right track.</span>
         </p>
       </div>

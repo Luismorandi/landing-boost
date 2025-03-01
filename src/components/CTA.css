@@ -149,6 +149,9 @@
     order: -1;
   }
 
+  .cta-section__content p{
+    display: none;
+  }
   /* 
     Apila todo en columna y 
     forzamos el mismo ancho en botones y input
