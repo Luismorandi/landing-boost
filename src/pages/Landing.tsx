@@ -14,6 +14,7 @@ const Landing: React.FC = () => {
       <Hero />
       <Features />
       <How />
+      <CTA />
       <Footer />
     </>
   );
