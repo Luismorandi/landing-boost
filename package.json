@@ -2,7 +2,7 @@
   "name": "landing-page-ts",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://luismorandi.github.io/landing-boost",
+  "homepage": "https://landing-boost.onrender.com",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
