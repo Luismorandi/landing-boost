@@ -83,7 +83,7 @@
   }
 
   .features__header p {
-    font-size: 1rem;      /* Texto más pequeño */
+    font-size: 0.9rem;      /* Texto más pequeño */
     margin-bottom: 1rem;  /* Algo de espacio bajo el párrafo */
   }
 
@@ -97,10 +97,12 @@
   }
 
   .feature h3 {
+    color: #a2c027;
+
     font-size: 30px; /* Reduce el tamaño del subtítulo */
   }
 
   .feature p {
-    font-size: 1.4rem;  /* Texto un poco más compacto */
+    font-size: 1.1rem;  /* Texto un poco más compacto */
   }
 }
